@@ -75,5 +75,3 @@ GitHub: github.com/lovkiisanya
 🧼 Disclaimer
 This is a showcase version. No real patient data or secrets are included. Binotel and Telegram tokens are removed. """
 
-Write the README.md file
-readme_path = Path("README.md") readme_path.write_text(readme_content, encoding="utf-8")
