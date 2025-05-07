@@ -1,0 +1,18 @@
+[flake8]
+max-line-length = 100
+extend-ignore = I001, I004
+max-complexity = 6
+inline-quotes = double
+max-module-members = 7
+show-source = true
+statistics = true
+select = B, C, E, F, G, W, DAR, SLS, I, M
+ignore = WPS110, WPS317, W504, W503, WPS457, E203, E231, WPS305, WPS319
+per-file-ignores =
+    manage.py: WPS226
+    product_bot/settings.py: WPS407, WPS226, WPS336
+    product_bot/settings_test.py: WPS407, WPS226, WPS434, WPS300
+    product_bot/management/commands/runbot.py: WPS201, WPS213
+
+exclude =
+    product_bot/migrations/*

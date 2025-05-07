@@ -1,0 +1,20 @@
+name: Build and Push Docker Image
+
+on: push
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Log in to GHCR
+      run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
+
+    - name: Build Docker image
+      run: docker build -t ghcr.io/${{ secrets.GHCR_USERNAME }}/bot_for_ivan:latest .
+
+    - name: Push Docker image to GHCR
+      run: docker push ghcr.io/${{ secrets.GHCR_USERNAME }}/bot_for_ivan:latest
