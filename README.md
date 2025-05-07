@@ -1,6 +1,4 @@
-from pathlib import Path
-
-readme_content = """# 🩺 ProductBot — AI-Powered Patient Interaction Bot
+ 🩺 ProductBot — AI-Powered Patient Interaction Bot
 
 **ProductBot** is a Telegram-based bot designed to streamline and automate patient communication for a healthcare clinic. This is a public showcase version of a private production project — with sensitive data and secrets removed — to demonstrate architecture, code style, and bot workflow.
 
